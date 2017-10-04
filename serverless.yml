@@ -13,3 +13,10 @@ functions:
       - http:
           path: /
           method: get
+
+  person:
+    handler: com.serverless.PersonHandler
+    events:
+      - http:
+          path: /person
+          method: get
