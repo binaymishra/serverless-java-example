@@ -14,7 +14,7 @@ public class PersonHandler implements RequestHandler<Map<String, Object>, ApiGat
     @Override
     public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
         LOG.info("received: " + input);
-        Response responseBody = new Response("Hi Binay ! Your PersonHandler function executed successfully!", input);
+        Response responseBody = new Response("Hi Binay ! Your 'PersonHandler' function executed successfully!", input);
         return ApiGatewayResponse.builder()
                 .setStatusCode(200)
                 .setObjectBody(responseBody)
