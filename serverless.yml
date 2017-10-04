@@ -1,0 +1,15 @@
+service: serverless-java-example
+provider:
+  name: aws
+  runtime: java8
+
+package:
+  artifact: build/distributions/serverless-java-example.zip
+
+functions:
+  home:
+    handler: com.serverless.Handler
+    events:
+      - http:
+          path: /
+          method: get
